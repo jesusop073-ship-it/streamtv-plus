@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descargar StreamTV+</title>
+<style>
+  :root {
+    --bg: #060a14;
+    --panel: #0e1526;
+    --line: #1c2740;
+    --text: #eef1f4;
+    --muted: #8993a1;
+    --signal: #f2a93c;
+    --signal-dim: #5a4319;
+    --blue: #2a9bf5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100%;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--line), 0 12px 32px rgba(42, 155, 245, 0.15);
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  p.lead {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 34ch;
+    margin: 0 auto 36px;
+  }
+
+  .download-btn {
+    display: block;
+    width: 100%;
+    background: var(--signal);
+    color: #1a1204;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px 24px;
+    border-radius: 14px;
+    border: 3px solid var(--signal);
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+
+  .download-btn:hover {
+    background: #ffbd5c;
+  }
+
+  .download-btn:focus-visible,
+  .download-btn:focus {
+    outline: none;
+    background: #ffbd5c;
+    border-color: #fff1d6;
+    box-shadow: 0 0 0 5px rgba(242, 169, 60, 0.25);
+  }
+
+  .download-btn:active {
+    transform: scale(0.98);
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.02em;
+    margin-top: 14px;
+  }
+
+  .steps {
+    margin-top: 44px;
+    text-align: left;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 24px 24px 20px;
+  }
+
+  .steps ol {
+    list-style: none;
+    counter-reset: step;
+  }
+
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .steps li + li { margin-top: 16px; }
+
+  .steps li::before {
+    content: counter(step);
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--signal-dim);
+    color: #ffd699;
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .steps li span { color: var(--muted); }
+  .steps li strong { color: var(--text); font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo">
+      <img src="icon.png" alt="StreamTV+">
+    </div>
+
+    <h1>Instala StreamTV+</h1>
+    <p class="lead">Descarga el instalador y tenla lista en tu celular o TV en un par de minutos.</p>
+
+    <!-- 1) PEGA AQUI TU LINK DIRECTO AL .apk, reemplazando el # -->
+    <a class="download-btn" href="https://github.com/jesusop073-ship-it/streamtv-plus/releases/download/v1.0.0/app-release.apk" download>Descargar APK</a>
+    <div class="meta">Version 1.0.0 &middot; Android</div>
+
+    <div class="steps">
+      <ol>
+        <li><span>Toca</span> <strong>Descargar APK</strong> <span>y espera a que termine.</span></li>
+        <li><span>Abre el archivo</span> <strong>descargado</strong> <span>desde tus notificaciones o tu carpeta de Descargas.</span></li>
+        <li><span>Si aparece un aviso, toca</span> <strong>Permitir</strong> <span>para instalar apps fuera de la tienda.</span></li>
+        <li><span>Toca</span> <strong>Instalar</strong> <span>y luego abre la app. Listo.</span></li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>
